@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Helvetica Neue,sans-serif">
+<rect width="900" height="400" rx="18" fill="#fbf9f4"/>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3e8"/><stop offset="1" stop-color="#fbf9f4"/></linearGradient></defs>
+<rect x="20" y="20" width="420" height="300" rx="14" fill="url(#s)"/>
+<rect x="460" y="20" width="420" height="300" rx="14" fill="url(#s)"/>
+<text x="40" y="52" font-size="15" font-weight="700" fill="#33372f">In town: across Guildford</text>
+<text x="40" y="72" font-size="12" fill="#6f7569">Buildings block and bounce the signal. It still got through.</text>
+<text x="480" y="52" font-size="15" font-weight="700" fill="#33372f">In the open: mountain to mountain</text>
+<text x="480" y="72" font-size="12" fill="#6f7569">The Meshtastic record on 868 MHz</text>
+<rect x="60" y="240" width="26" height="60" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="66" y="250" width="5" height="7" fill="#f4efe2"/><rect x="75" y="250" width="5" height="7" fill="#f4efe2"/>
+<rect x="66" y="268" width="5" height="7" fill="#f4efe2"/><rect x="75" y="268" width="5" height="7" fill="#f4efe2"/>
+<rect x="90" y="205" width="26" height="95" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="96" y="215" width="5" height="7" fill="#f4efe2"/><rect x="105" y="215" width="5" height="7" fill="#f4efe2"/>
+<rect x="96" y="233" width="5" height="7" fill="#f4efe2"/><rect x="105" y="233" width="5" height="7" fill="#f4efe2"/>
+<rect x="96" y="251" width="5" height="7" fill="#f4efe2"/><rect x="105" y="251" width="5" height="7" fill="#f4efe2"/>
+<rect x="96" y="269" width="5" height="7" fill="#f4efe2"/><rect x="105" y="269" width="5" height="7" fill="#f4efe2"/>
+<rect x="120" y="230" width="31" height="70" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="126" y="240" width="5" height="7" fill="#f4efe2"/><rect x="140" y="240" width="5" height="7" fill="#f4efe2"/>
+<rect x="126" y="258" width="5" height="7" fill="#f4efe2"/><rect x="140" y="258" width="5" height="7" fill="#f4efe2"/>
+<rect x="126" y="276" width="5" height="7" fill="#f4efe2"/><rect x="140" y="276" width="5" height="7" fill="#f4efe2"/>
+<rect x="155" y="180" width="31" height="120" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="161" y="190" width="5" height="7" fill="#f4efe2"/><rect x="175" y="190" width="5" height="7" fill="#f4efe2"/>
+<rect x="161" y="208" width="5" height="7" fill="#f4efe2"/><rect x="175" y="208" width="5" height="7" fill="#f4efe2"/>
+<rect x="161" y="226" width="5" height="7" fill="#f4efe2"/><rect x="175" y="226" width="5" height="7" fill="#f4efe2"/>
+<rect x="161" y="244" width="5" height="7" fill="#f4efe2"/><rect x="175" y="244" width="5" height="7" fill="#f4efe2"/>
+<rect x="161" y="262" width="5" height="7" fill="#f4efe2"/><rect x="175" y="262" width="5" height="7" fill="#f4efe2"/>
+<rect x="161" y="280" width="5" height="7" fill="#f4efe2"/><rect x="175" y="280" width="5" height="7" fill="#f4efe2"/>
+<rect x="190" y="215" width="27" height="85" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="196" y="225" width="5" height="7" fill="#f4efe2"/><rect x="206" y="225" width="5" height="7" fill="#f4efe2"/>
+<rect x="196" y="243" width="5" height="7" fill="#f4efe2"/><rect x="206" y="243" width="5" height="7" fill="#f4efe2"/>
+<rect x="196" y="261" width="5" height="7" fill="#f4efe2"/><rect x="206" y="261" width="5" height="7" fill="#f4efe2"/>
+<rect x="196" y="279" width="5" height="7" fill="#f4efe2"/><rect x="206" y="279" width="5" height="7" fill="#f4efe2"/>
+<rect x="221" y="160" width="25" height="140" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="227" y="170" width="5" height="7" fill="#f4efe2"/><rect x="235" y="170" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="188" width="5" height="7" fill="#f4efe2"/><rect x="235" y="188" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="206" width="5" height="7" fill="#f4efe2"/><rect x="235" y="206" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="224" width="5" height="7" fill="#f4efe2"/><rect x="235" y="224" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="242" width="5" height="7" fill="#f4efe2"/><rect x="235" y="242" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="260" width="5" height="7" fill="#f4efe2"/><rect x="235" y="260" width="5" height="7" fill="#f4efe2"/>
+<rect x="227" y="278" width="5" height="7" fill="#f4efe2"/><rect x="235" y="278" width="5" height="7" fill="#f4efe2"/>
+<rect x="250" y="225" width="28" height="75" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="256" y="235" width="5" height="7" fill="#f4efe2"/><rect x="267" y="235" width="5" height="7" fill="#f4efe2"/>
+<rect x="256" y="253" width="5" height="7" fill="#f4efe2"/><rect x="267" y="253" width="5" height="7" fill="#f4efe2"/>
+<rect x="256" y="271" width="5" height="7" fill="#f4efe2"/><rect x="267" y="271" width="5" height="7" fill="#f4efe2"/>
+<rect x="282" y="190" width="30" height="110" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="288" y="200" width="5" height="7" fill="#f4efe2"/><rect x="301" y="200" width="5" height="7" fill="#f4efe2"/>
+<rect x="288" y="218" width="5" height="7" fill="#f4efe2"/><rect x="301" y="218" width="5" height="7" fill="#f4efe2"/>
+<rect x="288" y="236" width="5" height="7" fill="#f4efe2"/><rect x="301" y="236" width="5" height="7" fill="#f4efe2"/>
+<rect x="288" y="254" width="5" height="7" fill="#f4efe2"/><rect x="301" y="254" width="5" height="7" fill="#f4efe2"/>
+<rect x="288" y="272" width="5" height="7" fill="#f4efe2"/><rect x="301" y="272" width="5" height="7" fill="#f4efe2"/>
+<rect x="316" y="235" width="30" height="65" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="322" y="245" width="5" height="7" fill="#f4efe2"/><rect x="335" y="245" width="5" height="7" fill="#f4efe2"/>
+<rect x="322" y="263" width="5" height="7" fill="#f4efe2"/><rect x="335" y="263" width="5" height="7" fill="#f4efe2"/>
+<rect x="322" y="281" width="5" height="7" fill="#f4efe2"/><rect x="335" y="281" width="5" height="7" fill="#f4efe2"/>
+<rect x="350" y="200" width="28" height="100" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="356" y="210" width="5" height="7" fill="#f4efe2"/><rect x="367" y="210" width="5" height="7" fill="#f4efe2"/>
+<rect x="356" y="228" width="5" height="7" fill="#f4efe2"/><rect x="367" y="228" width="5" height="7" fill="#f4efe2"/>
+<rect x="356" y="246" width="5" height="7" fill="#f4efe2"/><rect x="367" y="246" width="5" height="7" fill="#f4efe2"/>
+<rect x="356" y="264" width="5" height="7" fill="#f4efe2"/><rect x="367" y="264" width="5" height="7" fill="#f4efe2"/>
+<rect x="356" y="282" width="5" height="7" fill="#f4efe2"/><rect x="367" y="282" width="5" height="7" fill="#f4efe2"/>
+<rect x="382" y="220" width="29" height="80" rx="2" fill="#d9d4c6" stroke="#b9b2a2"/>
+<rect x="388" y="230" width="5" height="7" fill="#f4efe2"/><rect x="400" y="230" width="5" height="7" fill="#f4efe2"/>
+<rect x="388" y="248" width="5" height="7" fill="#f4efe2"/><rect x="400" y="248" width="5" height="7" fill="#f4efe2"/>
+<rect x="388" y="266" width="5" height="7" fill="#f4efe2"/><rect x="400" y="266" width="5" height="7" fill="#f4efe2"/>
+<rect x="388" y="284" width="5" height="7" fill="#f4efe2"/><rect x="400" y="284" width="5" height="7" fill="#f4efe2"/>
+<rect x="20" y="298" width="420" height="22" fill="#dfe8d6"/>
+<!-- church spire hint -->
+<!-- radios at each side -->
+<g><rect x="34" y="262" width="16" height="22" rx="4" fill="#b9cca8" stroke="#33372f" stroke-width="2"/><line x1="46" y1="262" x2="48" y2="246" stroke="#33372f" stroke-width="2" stroke-linecap="round"/></g>
+<g><rect x="404" y="140" width="16" height="22" rx="4" fill="#b9cca8" stroke="#33372f" stroke-width="2"/><line x1="416" y1="140" x2="418" y2="124" stroke="#33372f" stroke-width="2" stroke-linecap="round"/></g>
+<path d="M50 250 L120 205 L150 230 L220 150 L262 182 L330 120 L404 150" fill="none" stroke="#c0764f" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+<g fill="#c0764f"><circle cx="120" cy="205" r="3"/><circle cx="150" cy="230" r="3"/><circle cx="220" cy="150" r="3"/><circle cx="262" cy="182" r="3"/><circle cx="330" cy="120" r="3"/></g>
+<text x="352" y="112" font-size="11" fill="#6f7569">loft</text>
+<!-- open: mountains -->
+<path d="M460 300 L520 170 L560 210 L600 120 L660 300Z" fill="#cddcc0"/>
+<path d="M740 300 L800 140 L830 180 L860 110 L880 140 V300Z" fill="#b9cca8"/>
+<path d="M460 300 C560 270 760 280 880 260 V320 H460Z" fill="#dfe8d6"/>
+<path d="M640 300 C700 250 720 260 760 300Z" fill="#e8eee0"/>
+<g><rect x="592" y="98" width="16" height="22" rx="4" fill="#b9cca8" stroke="#33372f" stroke-width="2"/><line x1="604" y1="98" x2="606" y2="82" stroke="#33372f" stroke-width="2" stroke-linecap="round"/></g>
+<g><rect x="852" y="88" width="16" height="22" rx="4" fill="#b9cca8" stroke="#33372f" stroke-width="2"/><line x1="864" y1="88" x2="866" y2="72" stroke="#33372f" stroke-width="2" stroke-linecap="round"/></g>
+<path d="M610 90 C680 60 780 56 852 84" fill="none" stroke="#c0764f" stroke-width="2.5" stroke-dasharray="2 7" stroke-linecap="round"/>
+<rect x="684" y="88" width="96" height="30" rx="15" fill="#fff" stroke="#e7e3d8"/>
+<text x="732" y="108" font-size="14" font-weight="700" fill="#c0764f" text-anchor="middle">331 km</text>
+<text x="40" y="352" font-size="13" fill="#33372f"><tspan font-weight="700">Line of sight</tspan> is what matters. Height beats power: a radio on a hill or a roof</text>
+<text x="40" y="372" font-size="13" fill="#33372f">reaches much farther than the same radio in a valley or a street.</text>
+</svg>

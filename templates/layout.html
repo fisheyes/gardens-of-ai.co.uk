@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="author" content="{{author}}">
+<link rel="canonical" href="{{canonical}}">
+<meta property="og:site_name" content="{{site}}">
+<meta property="og:type" content="{{ogType}}">
+<meta property="og:title" content="{{ogTitle}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{image}}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+{{head}}
+<link rel="alternate" type="application/rss+xml" title="{{site}}" href="/feed.xml">
+<link rel="icon" href="/assets/sprout.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/"><img src="/assets/sprout.svg" alt="" width="22" height="22">{{site}}</a>
+  <nav><a href="/about/">About</a></nav>
+</header>
+<main>
+{{body}}
+</main>
+<footer class="site">
+  <p>{{site}} · {{year}} · A personal blog. Views are my own. · <a href="/feed.xml">RSS</a></p>
+</footer>
+</body>
+</html>

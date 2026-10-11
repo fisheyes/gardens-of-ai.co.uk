@@ -1,0 +1,13 @@
+# Local preview of the built site (dist/). Hosting will move to S3 + CloudFront later.
+services:
+  gardens-of-ai:
+    image: nginx:alpine
+    container_name: gardens-of-ai
+    restart: unless-stopped
+    network_mode: bridge   # Docker has no free address pools for a new network
+    ports:
+      - "8180:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    security_opt:
+      - no-new-privileges:true

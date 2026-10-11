@@ -1,0 +1,10 @@
+{
+  "title": "Gardens of AI",
+  "tagline": "Ideas, grown in the shed",
+  "intro": "I build things at home with AI. Some work. Some do not. I write down both.",
+  "url": "https://gardens-of-ai.co.uk",
+  "author": "Dominic Searle",
+  "description": "Dominic Searle's personal blog: practical AI projects built at home in the UK, from LoRa radio to beekeeping.",
+  "image": "/assets/og-default.png",
+  "giscus": { "repo": "", "repoId": "", "category": "", "categoryId": "" }
+}

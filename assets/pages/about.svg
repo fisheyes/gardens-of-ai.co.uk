@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Helvetica Neue,sans-serif">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbf9f4"/><stop offset="1" stop-color="#f3efe4"/></linearGradient>
+ <linearGradient id="out" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbefe7"/><stop offset="1" stop-color="#eef3e8"/></linearGradient>
+ <linearGradient id="beer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9a94f"/><stop offset="1" stop-color="#c9822e"/></linearGradient>
+ <linearGradient id="wort" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d99a4a" stop-opacity=".85"/><stop offset="1" stop-color="#b8742c" stop-opacity=".9"/></linearGradient>
+ <clipPath id="win"><rect x="560" y="50" width="280" height="200" rx="10"/></clipPath>
+</defs>
+<rect width="900" height="460" rx="18" fill="url(#wall)"/>
+<!-- wall planks -->
+<g stroke="#ebe6d9" stroke-width="2"><line x1="0" y1="110" x2="900" y2="110"/><line x1="0" y1="200" x2="900" y2="200"/><line x1="0" y1="290" x2="900" y2="290"/></g>
+<!-- window to the garden -->
+<g clip-path="url(#win)">
+ <rect x="560" y="50" width="280" height="200" fill="url(#out)"/>
+ <circle cx="780" cy="100" r="26" fill="#f1b48e" opacity=".8"/>
+ <path d="M560 190 C640 160 740 170 840 150 V250 H560Z" fill="#cddcc0"/>
+ <path d="M560 215 C660 200 760 215 840 205 V250 H560Z" fill="#b9cca8"/>
+ <g stroke="#33372f" stroke-width="2" stroke-linejoin="round">
+  <rect x="640" y="150" width="54" height="10" rx="2" fill="#f2d9c8"/>
+  <rect x="644" y="160" width="46" height="26" fill="#fff"/><rect x="644" y="186" width="46" height="24" fill="#fbf9f4"/>
+  <line x1="650" y1="210" x2="650" y2="226"/><line x1="684" y1="210" x2="684" y2="226"/>
+  <rect x="728" y="164" width="46" height="9" rx="2" fill="#f2d9c8"/>
+  <rect x="731" y="173" width="40" height="22" fill="#fff"/><rect x="731" y="195" width="40" height="20" fill="#fbf9f4"/>
+  <line x1="737" y1="215" x2="737" y2="228"/><line x1="765" y1="215" x2="765" y2="228"/>
+ </g>
+ <g fill="#e2b04a" stroke="#33372f" stroke-width="1"><ellipse cx="620" cy="120" rx="4" ry="3"/><ellipse cx="712" cy="132" rx="4" ry="3"/><ellipse cx="800" cy="140" rx="4" ry="3"/></g>
+</g>
+<rect x="560" y="50" width="280" height="200" rx="10" fill="none" stroke="#33372f" stroke-width="3"/>
+<line x1="700" y1="50" x2="700" y2="250" stroke="#33372f" stroke-width="3"/>
+<rect x="550" y="248" width="300" height="12" rx="3" fill="#d9cdb8" stroke="#33372f" stroke-width="2"/>
+<!-- shelf with sprout + hops -->
+<rect x="70" y="120" width="300" height="10" rx="3" fill="#d9cdb8" stroke="#33372f" stroke-width="2"/>
+<g stroke="#33372f" stroke-width="2" stroke-linejoin="round">
+ <path d="M96 120 L100 92 H130 L134 120Z" fill="#f2d9c8"/>
+ <path d="M116 92 V70" fill="none" stroke="#5f7d5a" stroke-width="2.5"/>
+ <path d="M116 78 c0 -12 -8 -16 -18 -16 0 10 6 16 18 16z" fill="#dfe8d6" stroke="#5f7d5a"/>
+ <path d="M116 72 c0 -12 8 -18 18 -18 0 12 -8 18 -18 18z" fill="#f2d9c8" stroke="#c0764f"/>
+ <rect x="170" y="88" width="56" height="32" rx="4" fill="#fff"/>
+ <text x="198" y="109" font-size="11" font-weight="700" fill="#c0764f" text-anchor="middle" stroke="none">HONEY</text>
+ <rect x="240" y="96" width="30" height="24" rx="4" fill="#e9c27a"/><rect x="238" y="90" width="34" height="8" rx="2" fill="#f2d9c8"/>
+ <rect x="282" y="96" width="30" height="24" rx="4" fill="#e9c27a"/><rect x="280" y="90" width="34" height="8" rx="2" fill="#f2d9c8"/>
+</g>
+<!-- hop vine trailing from shelf -->
+<path d="M330 130 C340 160 320 180 336 210" fill="none" stroke="#7f9f75" stroke-width="2.5"/>
+<g fill="#b9cca8" stroke="#5f7d5a" stroke-width="1.5"><path d="M330 150 c-8 4 -8 14 0 18 c8 -4 8 -14 0 -18z"/><path d="M334 186 c-8 4 -8 14 0 18 c8 -4 8 -14 0 -18z"/></g>
+<!-- bench -->
+<rect x="30" y="330" width="840" height="18" rx="4" fill="#c9b79a" stroke="#33372f" stroke-width="2.5"/>
+<rect x="60" y="348" width="16" height="96" fill="#b9a688" stroke="#33372f" stroke-width="2.5"/>
+<rect x="824" y="348" width="16" height="96" fill="#b9a688" stroke="#33372f" stroke-width="2.5"/>
+<!-- fermenter -->
+<g stroke="#33372f" stroke-width="2.5" stroke-linejoin="round">
+ <path d="M80 330 V200 C80 186 90 180 104 180 H196 C210 180 220 186 220 200 V330Z" fill="#fff" fill-opacity=".7"/>
+ <path d="M84 326 V228 H216 V326Z" fill="url(#wort)" stroke="none"/>
+ <path d="M84 228 H216" stroke="#fff" stroke-width="5"/>
+ <rect x="138" y="160" width="24" height="22" rx="4" fill="#f2d9c8"/>
+ <path d="M150 160 V140 C150 128 168 128 168 140 V150" fill="none"/>
+ <rect x="166" y="146" width="10" height="16" rx="3" fill="#eef3e8"/>
+ <rect x="100" y="256" width="60" height="28" rx="4" fill="#fbf9f4"/>
+ <text x="130" y="274" font-size="10" font-weight="700" fill="#33372f" text-anchor="middle" stroke="none">IPA #7</text>
+</g>
+<g fill="#fff" opacity=".8"><circle cx="120" cy="300" r="3"/><circle cx="170" cy="270" r="2.5"/><circle cx="190" cy="305" r="2"/><circle cx="140" cy="246" r="2"/></g>
+
+<!-- laptop -->
+<g stroke="#33372f" stroke-width="2.5" stroke-linejoin="round">
+ <rect x="290" y="200" width="220" height="130" rx="10" fill="#33372f"/>
+ <rect x="300" y="210" width="200" height="110" rx="4" fill="#20251f"/>
+ <path d="M266 330 H534 L522 340 H278Z" fill="#d9d4c6"/>
+</g>
+<g font-family="ui-monospace,Menlo,monospace" font-size="10.5">
+ <text x="312" y="230" fill="#9db58f">$ node base/ask.mjs</text>
+ <text x="312" y="248" fill="#e7e3d8">Q: dusk at the apiary?</text>
+ <text x="312" y="266" fill="#f0c4a8">A: 18:41 civil dusk.</text>
+ <text x="312" y="284" fill="#9db58f">2 packets, 4.1x smaller</text>
+ <rect x="312" y="294" width="8" height="12" fill="#e7e3d8"/>
+</g>
+<!-- heltec radio -->
+<g stroke="#33372f" stroke-width="2.5" stroke-linejoin="round">
+ <rect x="560" y="286" width="70" height="44" rx="10" fill="#b9cca8"/>
+ <rect x="572" y="296" width="34" height="20" rx="3" fill="#0d1218"/>
+ <line x1="620" y1="286" x2="626" y2="240" stroke-linecap="round" stroke-width="4"/>
+ <circle cx="616" cy="318" r="3" fill="#c0764f" stroke="none"/>
+</g>
+<text x="578" y="310" font-size="7" fill="#9fd7ff" font-family="ui-monospace,Menlo,monospace">LoRa</text>
+<g fill="none" stroke="#c0764f" stroke-width="2" stroke-linecap="round"><path d="M634 236 a10 10 0 0 1 6 12"/><path d="M640 226 a20 20 0 0 1 10 22"/></g>
+<!-- pint -->
+<g stroke="#33372f" stroke-width="2.5" stroke-linejoin="round">
+ <path d="M690 250 H750 L742 330 H698Z" fill="url(#beer)"/>
+ <path d="M688 250 C690 236 704 234 712 240 C720 230 736 232 740 240 C750 236 756 244 752 252 H688Z" fill="#fffaf0"/>
+</g>
+<g fill="#fff6e0" opacity=".8"><circle cx="712" cy="300" r="2"/><circle cx="726" cy="284" r="1.6"/><circle cx="718" cy="268" r="1.4"/></g>
+<!-- bee on the pint rim -->
+<g transform="translate(768 238) rotate(-20)"><ellipse rx="7" ry="5" fill="#e2b04a" stroke="#33372f" stroke-width="1.4"/><path d="M-1 -5 v10 M3 -4.5 v9" stroke="#33372f" stroke-width="1.6"/><ellipse cx="-1" cy="-8" rx="5" ry="3.5" fill="#fff" fill-opacity=".85" stroke="#a6ad9f"/></g>
+<path d="M776 230 c14 -16 30 -10 36 -26" fill="none" stroke="#a6ad9f" stroke-width="1.5" stroke-dasharray="2 4"/>
+<!-- mug of tea? no: notebook -->
+<g stroke="#33372f" stroke-width="2" stroke-linejoin="round"><rect x="782" y="300" width="64" height="30" rx="3" fill="#fbefe7" transform="rotate(-6 814 315)"/></g>
+<text x="796" y="320" font-size="9" fill="#8b5a3e" transform="rotate(-6 814 315)">ideas…</text>
+</svg>
