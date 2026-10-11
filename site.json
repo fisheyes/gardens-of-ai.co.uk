@@ -6,5 +6,10 @@
   "author": "Dominic Searle",
   "description": "Dominic Searle's personal blog: practical AI projects built at home in the UK, from LoRa radio to beekeeping.",
   "image": "/assets/og-default.png",
-  "giscus": { "repo": "", "repoId": "", "category": "", "categoryId": "" }
+  "giscus": {
+    "repo": "fisheyes/gardens-of-ai.co.uk",
+    "repoId": "R_kgDOP9aUew",
+    "category": "Announcements",
+    "categoryId": "DIC_kwDOP9aUe84DHl5m"
+  }
 }
