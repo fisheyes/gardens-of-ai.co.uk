@@ -1,5 +1,6 @@
 ---
 title: About
+updated: 2026-10-12
 ---
 
 ![My kind of workbench: code on the laptop, a LoRa radio, a brew on the go, a pint, and the bees outside.](/assets/pages/about.svg)

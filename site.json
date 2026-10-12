@@ -11,5 +11,8 @@
     "repoId": "R_kgDOP9aUew",
     "category": "Announcements",
     "categoryId": "DIC_kwDOP9aUe84DHl5m"
-  }
+  },
+  "sameAs": [
+    "https://github.com/fisheyes"
+  ]
 }

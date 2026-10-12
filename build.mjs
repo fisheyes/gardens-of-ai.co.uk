@@ -119,7 +119,7 @@ const page = (vars) => fill(tpl('layout.html'), { site: SITE.title, tagline: SIT
   ogType: 'website', ogTitle: vars.title, image: abs(SITE.image), head: '', ...vars, canonical: abs(vars.path),
   ...(vars.image && { image: abs(vars.image) }) });
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', ...o }).replace(/</g, '\\u003c')}</script>`;
-const person = { '@type': 'Person', name: SITE.author, url: `${SITE.url}/about/` };
+const person = { '@type': 'Person', name: SITE.author, url: `${SITE.url}/about/`, ...(SITE.sameAs && { sameAs: SITE.sameAs }) };
 const G = SITE.giscus || {};
 const comments = G.repo && G.repoId && G.categoryId ? fill(tpl('comments.html'), G) : '';
 
@@ -137,7 +137,7 @@ for (const p of posts) {
   const tags = p.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('');
   const url = `/posts/${p.slug}/`;
   write(`posts/${p.slug}/index.html`, page({
-    title: `${esc(p.title)} · ${SITE.title}`, ogTitle: esc(p.title), description: esc(p.summary || ''), path: url, ogType: 'article', image: p.image,
+    title: `${esc(p.seoTitle || p.title)} · ${SITE.title}`, ogTitle: esc(p.title), description: esc(p.summary || ''), path: url, ogType: 'article', image: p.image,
     head: `<meta property="article:published_time" content="${p.date}">\n<meta name="keywords" content="${esc(p.tags.join(', '))}">\n` + jsonld({
       '@type': 'BlogPosting', headline: p.title, description: p.summary, datePublished: p.date, dateModified: p.updated || p.date,
       author: person, image: abs(p.image || SITE.image), keywords: p.tags.join(', '), mainEntityOfPage: abs(url), inLanguage: 'en-GB' }),
@@ -171,8 +171,9 @@ write('index.html', page({ title: `${SITE.title}: ${SITE.tagline}`, description:
 
 // 404, sitemap, robots, RSS, and the files GitHub Pages needs (CNAME: custom domain; .nojekyll: serve as is).
 write('404.html', page({ title: `Not found · ${SITE.title}`, description: esc(SITE.description), path: '/404.html', body: tpl('404.html') }));
-const pagesList = fs.readdirSync(path.join(ROOT, 'pages')).filter((f) => f.endsWith('.md')).map((f) => `/${path.basename(f, '.md')}/`);
-const urls = [{ loc: '/', lastmod: posts[0]?.date }, ...posts.map((p) => ({ loc: `/posts/${p.slug}/`, lastmod: p.updated || p.date })), ...pagesList.map((loc) => ({ loc }))];
+const pagesList = fs.readdirSync(path.join(ROOT, 'pages')).filter((f) => f.endsWith('.md'))
+  .map((f) => ({ loc: `/${path.basename(f, '.md')}/`, lastmod: readPost(path.join(ROOT, 'pages', f)).updated }));
+const urls = [{ loc: '/', lastmod: posts[0]?.date }, ...posts.map((p) => ({ loc: `/posts/${p.slug}/`, lastmod: p.updated || p.date })), ...pagesList];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) =>
   `  <url><loc>${abs(u.loc)}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n`);

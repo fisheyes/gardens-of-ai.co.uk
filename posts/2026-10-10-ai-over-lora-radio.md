@@ -1,7 +1,8 @@
 ---
 title: Asking an AI from a hill with no signal
+seoTitle: Asking an AI with no signal: an LLM over LoRa radio with Meshtastic
 date: 2026-10-10
-summary: Can people with no mobile signal still ask an AI for help? I tested the idea in the UK with two £18 radios. Here is how it works, and what I learned.
+summary: Can people with no mobile signal still ask an AI for help? I sent LLM questions over LoRa with two £18 Meshtastic radios in the UK. Here is how it works, and what I learned.
 tags: lora, meshtastic, llm, compression, off-grid, amazon bedrock, beekeeping, agritech, digital divide, radio
 draft: false
 image: /assets/posts/lora-llm/og.png

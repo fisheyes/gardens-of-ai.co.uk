@@ -1,5 +1,6 @@
 ---
 title: Non-blocking MCP Tasks with Strands Agents
+seoTitle: Non-blocking MCP Tasks in Strands Agents (Python example)
 date: 2026-10-12
 summary: How to let a Strands agent start a long-running MCP tool, do other work while it runs, and collect the result later.
 type: note
