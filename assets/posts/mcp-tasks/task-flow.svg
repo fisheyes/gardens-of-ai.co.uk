@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Helvetica Neue,sans-serif">
+  <rect width="900" height="380" rx="18" fill="#fbf9f4"/>
+  <defs><linearGradient id="srv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3e8"/><stop offset="1" stop-color="#dfe8d6"/></linearGradient></defs>
+  <!-- agent -->
+  <rect x="50" y="70" width="170" height="240" rx="20" fill="#fff" stroke="#33372f" stroke-width="2.5"/>
+  <circle cx="135" cy="125" r="30" fill="#b9cca8" stroke="#33372f" stroke-width="2.5"/>
+  <circle cx="125" cy="120" r="4" fill="#33372f"/><circle cx="145" cy="120" r="4" fill="#33372f"/>
+  <path d="M123 134 q12 9 24 0" stroke="#33372f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="135" y="185" font-size="15" font-weight="700" fill="#33372f" text-anchor="middle">Agent</text>
+  <text x="135" y="205" font-size="12" fill="#6f7569" text-anchor="middle">the client</text>
+  <!-- server -->
+  <rect x="680" y="70" width="170" height="240" rx="20" fill="url(#srv)" stroke="#33372f" stroke-width="2.5"/>
+  <rect x="705" y="100" width="120" height="26" rx="6" fill="#fff" stroke="#33372f" stroke-width="2"/>
+  <rect x="705" y="134" width="120" height="26" rx="6" fill="#fff" stroke="#33372f" stroke-width="2"/>
+  <circle cx="720" cy="113" r="4" fill="#5f7d5a"/><circle cx="720" cy="147" r="4" fill="#c0764f"/>
+  <g transform="translate(765 262)"><circle r="22" fill="#fff" stroke="#33372f" stroke-width="2.5"/><path d="M0 -12 V0 L9 6" stroke="#c0764f" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+  <text x="765" y="185" font-size="15" font-weight="700" fill="#33372f" text-anchor="middle">MCP server</text>
+  <text x="765" y="205" font-size="12" fill="#6f7569" text-anchor="middle">keeps doing the job</text>
+  <!-- arrows -->
+  <g stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M230 95 H668" stroke="#5f7d5a"/><path d="M660 88 l10 7 l-10 7" stroke="#5f7d5a"/>
+    <path d="M670 150 H232" stroke="#c0764f"/><path d="M240 143 l-10 7 l10 7" stroke="#c0764f"/>
+    <path d="M230 215 H668" stroke="#5f7d5a" stroke-dasharray="6 6"/><path d="M660 208 l10 7 l-10 7" stroke="#5f7d5a"/>
+    <path d="M670 270 H232" stroke="#c0764f"/><path d="M240 263 l-10 7 l10 7" stroke="#c0764f"/>
+  </g>
+  <g font-size="12.5" fill="#33372f" text-anchor="middle">
+    <circle cx="300" cy="86" r="11" fill="#5f7d5a"/><text x="300" y="90" fill="#fff" font-weight="700">1</text>
+    <text x="460" y="84">"Please run slow_computation"</text>
+    <circle cx="300" cy="141" r="11" fill="#c0764f"/><text x="300" y="145" fill="#fff" font-weight="700">2</text>
+    <text x="460" y="139">at once: task_id k6jK…, status working</text>
+    <circle cx="300" cy="206" r="11" fill="#5f7d5a"/><text x="300" y="210" fill="#fff" font-weight="700">3</text>
+    <text x="460" y="204">"Is task k6jK… done?"  (again and again)</text>
+    <circle cx="300" cy="261" r="11" fill="#c0764f"/><text x="300" y="265" fill="#fff" font-weight="700">4</text>
+    <text x="460" y="259">completed, here is the result</text>
+  </g>
+  <!-- task_id tag -->
+  <g transform="translate(395 300)">
+    <path d="M0 0 H130 V12 a8 8 0 0 0 0 16 V40 H0 V28 a8 8 0 0 0 0 -16Z" fill="#f2d9c8" stroke="#33372f" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="65" y="26" font-size="13" font-weight="700" fill="#33372f" text-anchor="middle">task_id</text>
+  </g>
+</svg>

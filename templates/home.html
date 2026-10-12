@@ -4,14 +4,27 @@
     <h1>Gardens of <span class="accent">AI</span></h1>
     <p>{{intro}}</p>
   </div>
-  <div class="tree" style="aspect-ratio:{{ratio}}">
+  <div class="garden">
+    <div class="tree" style="aspect-ratio:{{ratio}}">
 {{tree}}
-    <div class="blooms">
+      <div class="blooms">
 {{blooms}}
+      </div>
+    </div>
+    <div class="allotment" style="aspect-ratio:{{bedRatio}};margin-bottom:{{lift}}%">
+{{allotment}}
+      <div class="plants">
+{{plants}}
+      </div>
     </div>
   </div>
+  <p class="garden-key"><span class="key-bloom"></span>Projects on the tree <span class="key-plant"></span>Technical notes in the allotment</p>
 </section>
 <section class="posts">
-  <h2 class="section-title">All writing</h2>
-{{list}}
+  <h2 class="section-title">Projects</h2>
+{{projects}}
+</section>
+<section class="posts">
+  <h2 class="section-title">Technical notes</h2>
+{{notes}}
 </section>

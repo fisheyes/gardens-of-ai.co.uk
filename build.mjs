@@ -11,6 +11,7 @@
 //   summary: One line for the home page.
 //   tags: radio, llm
 //   draft: false
+//   type: note        # optional: a technical note. Notes grow in the allotment, not on the tree.
 //   ---
 //
 // The file name (without .md and without a leading date) becomes the URL: /posts/<slug>/.
@@ -18,6 +19,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { grow } from './tree.mjs';
+import { plot } from './allotment.mjs';
 
 const ROOT = path.dirname(new URL(import.meta.url).pathname);
 const OUT = path.join(ROOT, 'dist');
@@ -117,7 +119,7 @@ const page = (vars) => fill(tpl('layout.html'), { site: SITE.title, tagline: SIT
   ogType: 'website', ogTitle: vars.title, image: abs(SITE.image), head: '', ...vars, canonical: abs(vars.path),
   ...(vars.image && { image: abs(vars.image) }) });
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', ...o }).replace(/</g, '\\u003c')}</script>`;
-const person = { '@type': 'Person', name: SITE.author, url: `${SITE.url}/about/`, sameAs: ['https://uk.linkedin.com/in/dominic-searle-1661584'] };
+const person = { '@type': 'Person', name: SITE.author, url: `${SITE.url}/about/` };
 const G = SITE.giscus || {};
 const comments = G.repo && G.repoId && G.categoryId ? fill(tpl('comments.html'), G) : '';
 
@@ -151,15 +153,21 @@ for (const f of fs.readdirSync(path.join(ROOT, 'pages')).filter((f) => f.endsWit
     body: fill(tpl('page.html'), { title: esc(p.title), content: p.html }) }));
 }
 
-const list = posts.map((p) => fill(tpl('card.html'), { url: `/posts/${p.slug}/`, title: esc(p.title), summary: esc(p.summary || ''),
-  date: p.date, niceDate: niceDate(p.date), minutes: p.minutes })).join('\n');
-const { svg, blooms, ratio } = grow(posts);
+const card = (p) => fill(tpl('card.html'), { url: `/posts/${p.slug}/`, title: esc(p.title), summary: esc(p.summary || ''),
+  date: p.date, niceDate: niceDate(p.date), minutes: p.minutes });
+const projects = posts.filter((p) => p.type !== 'note'), notes = posts.filter((p) => p.type === 'note');
+const { svg, blooms, ratio, ground } = grow(projects);
 // Labels face away from the trunk, but turn inward near the edges so they stay on screen.
 const bloomLinks = blooms.map((b, i) => fill(tpl('bloom.html'), { url: `/posts/${b.post.slug}/`, title: esc(b.post.title), niceDate: niceDate(b.post.date),
   x: b.x.toFixed(2), y: b.y.toFixed(2), side: b.x < 50 ? (b.x < 22 ? 'right' : 'left') : (b.x > 78 ? 'left' : 'right'), i })).join('\n');
+const bed = plot(notes);
+const TREE_SHARE = 54;   // % of the garden's width the tree takes; the allotment stands beside it on the same ground
+const plantLinks = bed.plants.map((b, i) => fill(tpl('bloom.html'), { url: `/posts/${b.post.slug}/`, title: esc(b.post.title), niceDate: niceDate(b.post.date),
+  x: b.x.toFixed(2), y: b.y.toFixed(2), side: `plant ${b.x > 70 ? 'left' : 'right'}`, i })).join('\n');
 write('index.html', page({ title: `${SITE.title}: ${SITE.tagline}`, description: esc(SITE.description), path: '/',
   head: jsonld({ '@type': 'WebSite', name: SITE.title, url: SITE.url, description: SITE.description, author: person, inLanguage: 'en-GB' }),
-  body: fill(tpl('home.html'), { intro: SITE.intro, tagline: esc(SITE.tagline), tree: svg, ratio: ratio.toFixed(3), blooms: bloomLinks, list }) }));
+  body: fill(tpl('home.html'), { intro: SITE.intro, tagline: esc(SITE.tagline), tree: svg, ratio: ratio.toFixed(3), blooms: bloomLinks,
+    allotment: bed.svg, bedRatio: bed.ratio.toFixed(3), lift: (TREE_SHARE / ratio * ground).toFixed(2), plants: plantLinks, projects: projects.map(card).join('\n'), notes: notes.map(card).join('\n') || '<p class="empty">Nothing planted yet.</p>' }) }));
 
 // 404, sitemap, robots, RSS, and the files GitHub Pages needs (CNAME: custom domain; .nojekyll: serve as is).
 write('404.html', page({ title: `Not found · ${SITE.title}`, description: esc(SITE.description), path: '/404.html', body: tpl('404.html') }));

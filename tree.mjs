@@ -65,7 +65,9 @@ export function grow(posts) {
       .sort((p, q) => Math.hypot(q.x - baseX, q.y - trunkTop) - Math.hypot(p.x - baseX, p.y - trunkTop));
     const tip = own.find((t) => placed.every((o) => Math.hypot(t.x - o.x, t.y - o.y) > 110)) || own[0];
     placed.push(tip);
-    return { post, x: (tip.x / W) * 100, y: (tip.y / H) * 100 };
+    // Set the bloom a little inside the leaves, toward the trunk, so it does not float above the canopy.
+    const d = Math.hypot(tip.x - baseX, tip.y - trunkTop) || 1, sink = 26;
+    return { post, x: ((tip.x - (tip.x - baseX) / d * sink) / W) * 100, y: ((tip.y - (tip.y - trunkTop) / d * sink) / H) * 100 };
   });
 
   const grass = Array.from({ length: 70 }, () => {
@@ -97,5 +99,5 @@ export function grow(posts) {
   </g>
   <g class="pollen-field">${pollen}</g>
 </svg>`;
-  return { svg, blooms, ratio: box.w / box.h };
+  return { svg, blooms, ratio: box.w / box.h, ground: (H - baseY) / box.h };
 }

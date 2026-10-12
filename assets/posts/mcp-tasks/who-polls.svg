@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Inter,Roboto,Helvetica Neue,sans-serif">
+  <rect width="900" height="420" rx="18" fill="#fbf9f4"/>
+  <defs><linearGradient id="loop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7e6da"/><stop offset="1" stop-color="#f2d9c8"/></linearGradient>
+  <linearGradient id="leaf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3e8"/><stop offset="1" stop-color="#dfe8d6"/></linearGradient></defs>
+  <text x="225" y="44" font-size="15" font-weight="700" fill="#33372f" text-anchor="middle">Strands does the polling</text>
+  <text x="225" y="64" font-size="12" fill="#6f7569" text-anchor="middle">the model waits</text>
+  <text x="675" y="44" font-size="15" font-weight="700" fill="#33372f" text-anchor="middle">The model does the polling</text>
+  <text x="675" y="64" font-size="12" fill="#6f7569" text-anchor="middle">the model is free between checks</text>
+  <line x1="450" y1="30" x2="450" y2="395" stroke="#e7e3d8" stroke-width="2" stroke-dasharray="4 6"/>
+  <!-- left -->
+  <rect x="45" y="90" width="360" height="60" rx="16" fill="#b9cca8" stroke="#33372f" stroke-width="2.5"/>
+  <text x="225" y="125" font-size="13.5" font-weight="600" fill="#33372f" text-anchor="middle">Model: call slow_computation</text>
+  <rect x="45" y="175" width="360" height="190" rx="16" fill="url(#loop)" stroke="#33372f" stroke-width="2.5"/>
+  <text x="225" y="203" font-size="13.5" font-weight="600" fill="#33372f" text-anchor="middle">Inside one tool call (call_tool_sync)</text>
+  <rect x="85" y="222" width="280" height="32" rx="16" fill="#fff" stroke="#33372f" stroke-width="2"/>
+  <text x="225" y="243" font-size="12.5" fill="#33372f" text-anchor="middle">submit → task_id</text>
+  <g transform="translate(225 305)">
+    <circle r="34" fill="none" stroke="#c0764f" stroke-width="3" stroke-dasharray="10 6"/>
+    <path d="M30 -18 l6 -10 l4 11" stroke="#c0764f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text y="5" font-size="12" fill="#33372f" text-anchor="middle">check</text>
+  </g>
+  <text x="290" y="300" font-size="12" fill="#6f7569">for 30 s</text>
+  <path d="M225 150 V173" stroke="#33372f" stroke-width="2.5"/>
+  <text x="225" y="390" font-size="12" fill="#6f7569" text-anchor="middle">The model sees one call that takes 30 seconds.</text>
+  <!-- right -->
+  <g font-size="13" fill="#33372f" text-anchor="middle">
+    <rect x="510" y="90" width="330" height="40" rx="14" fill="#5f7d5a" stroke="#33372f" stroke-width="2.5"/>
+    <text x="675" y="115" fill="#fff" font-weight="600">start_slow_computation → task_id</text>
+    <rect x="510" y="145" width="330" height="40" rx="14" fill="url(#leaf)" stroke="#33372f" stroke-width="2.5"/>
+    <text x="675" y="170">explains AWS Lambda</text>
+    <rect x="510" y="200" width="330" height="40" rx="14" fill="#c0764f" stroke="#33372f" stroke-width="2.5"/>
+    <text x="675" y="225" fill="#fff" font-weight="600">check_task → "still working"</text>
+    <rect x="510" y="255" width="330" height="40" rx="14" fill="url(#leaf)" stroke="#33372f" stroke-width="2.5"/>
+    <text x="675" y="280">more useful work</text>
+    <rect x="510" y="310" width="330" height="40" rx="14" fill="#c0764f" stroke="#33372f" stroke-width="2.5"/>
+    <text x="675" y="335" fill="#fff" font-weight="600">check_task → result ✓</text>
+  </g>
+  <path d="M490 110 C470 200 470 260 490 330" stroke="#5f7d5a" stroke-width="2.5" fill="none" stroke-dasharray="3 6" stroke-linecap="round"/>
+  <text x="675" y="390" font-size="12" fill="#6f7569" text-anchor="middle">Each check is one step of the agent loop.</text>
+</svg>
