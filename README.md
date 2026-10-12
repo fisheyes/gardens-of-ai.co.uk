@@ -9,7 +9,7 @@ Hosting will be S3 + CloudFront later. For now nginx serves a local preview.
 - Build: `node build.mjs` (Node 20+). Add `--drafts` to include posts with `draft: true`.
 
 ## Directory Structure
-- **Source**: `/mnt/nas/docker/gardens-of-ai/`
+- **Source**: `<nas>/docker/gardens-of-ai/`
   - `posts/` one Markdown file per post, `YYYY-MM-DD-slug.md`
   - `pages/` standalone pages (about.md becomes /about/), same format, no date
   - `templates/` layout, home, card (home page list item), bloom (post on the tree), post
@@ -18,7 +18,7 @@ Hosting will be S3 + CloudFront later. For now nginx serves a local preview.
   - `tree.mjs` the home page tree: one limb per post, the post is a bloom on its tip (newest on top).
     Seeded from the post slugs, so the shape only changes when posts change. Min 7 limbs.
   - `dist/` build output (do not edit, it is deleted on each build)
-- **Backups**: `/mnt/nas/backups/gardens-of-ai/`
+- **Backups**: `<nas>/backups/gardens-of-ai/` (or set `BACKUP_TARGET`)
 
 ## Writing a post
     scripts/new-post.sh "My title"     # makes posts/<date>-my-title.md as a draft

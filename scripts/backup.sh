@@ -3,8 +3,9 @@
 set -e
 SERVICE_NAME="gardens-of-ai"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-BACKUP_SOURCE="/mnt/nas/docker/$SERVICE_NAME"
-BACKUP_TARGET="/mnt/nas/backups/$SERVICE_NAME"
+# Source: this repo. Target: <docker dir>/../backups/<service>, or set BACKUP_TARGET.
+BACKUP_SOURCE="$(cd "$(dirname "$0")/.." && pwd)"
+BACKUP_TARGET="${BACKUP_TARGET:-$(cd "$BACKUP_SOURCE/../.." && pwd)/backups/$SERVICE_NAME}"
 echo "=== Starting $SERVICE_NAME Backup ($TIMESTAMP) ==="
 mkdir -p "$BACKUP_TARGET/data"
 tar -czf "$BACKUP_TARGET/data/$SERVICE_NAME-$TIMESTAMP.tar.gz" -C "$BACKUP_SOURCE" --exclude=./dist .
