@@ -138,7 +138,11 @@ main:has(.hero) .posts { max-width: 42rem; margin: 0 auto; }
 
 @media (max-width: 640px) {
   .label { display: none; }   /* the list below carries the titles on small screens */
-  .bud { width: 20px; height: 20px; }
+  .bud { width: 14px; height: 14px; box-shadow: 0 0 0 3px rgb(251 239 231 / .8), 0 4px 10px rgb(192 118 79 / .3); }
+  /* Stack the garden: the allotment stands under the tree, full width. */
+  .garden { flex-direction: column; align-items: stretch; }
+  .garden .tree { flex: none; width: 100%; }
+  .garden::after { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .branches path, .leaves ellipse, .bloom, .sway, .blooms, .pollen, .bud::after { animation: none; stroke-dashoffset: 0; opacity: 1; }
@@ -160,7 +164,9 @@ main:has(.post) { max-width: 46rem; }
 .garden .tree { flex: 0 0 54%; margin: 0; max-width: none; }
 .allotment { position: relative; flex: 1; margin-left: -2%; }
 .garden-key { display: flex; justify-content: center; align-items: center; gap: .5rem; flex-wrap: wrap; font-size: .85rem; color: var(--soft); margin: .6rem 0 2rem; }
+.garden-key > span { white-space: nowrap; display: inline-flex; align-items: center; gap: .45rem; }
 .key-bloom, .key-plant { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-left: .8rem; }
+.garden-key > span:first-child .key-bloom { margin-left: 0; }
 .key-bloom { background: radial-gradient(circle at 35% 35%, #fff6ef, #e8a988 55%, var(--clay)); }
 .key-plant { background: radial-gradient(circle at 35% 35%, #fff, #b9cca8 55%, var(--leaf)); }
 main:has(.hero) .posts + .posts { margin-top: 2.5rem; }
@@ -179,4 +185,8 @@ main:has(.hero) .posts + .posts { margin-top: 2.5rem; }
 @media (prefers-reduced-motion: reduce) {
   .water ellipse, .robot .antenna { animation: none; }
   .water ellipse { opacity: .8; translate: 8px 60px; }
+}
+@media (max-width: 640px) {
+  .allotment { flex: none; width: 100%; margin: -.5rem 0 0 !important; }
+  .bloom.plant .bud { width: 14px; height: 14px; box-shadow: 0 0 0 3px rgb(238 243 232 / .85), 0 4px 10px rgb(95 125 90 / .3); }
 }
